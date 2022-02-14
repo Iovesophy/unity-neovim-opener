@@ -51,31 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run argv
-	if argv = {} then
-		return "no exists args..."
-	else
-		set path to POSIX path of (item 1 of argv)
-	end if
-	set cmd to "nvim " &amp; fmt(path)
-	tell application "Terminal"
-		activate
-		tell window 1
-			do script cmd
-		end tell
-	end tell
-end run
-on fmt(pathText)
-	set od to AppleScript's text item delimiters
-	set AppleScript's text item delimiters to " "
-	set pathText to every text item of pathText
-	set AppleScript's text item delimiters to "\\ "
-	set pathText to pathText as string
-	set AppleScript's text item delimiters to od
-	return pathText
-end fmt
-
-</string>
+					<string>on run argv	if argv = {} then		return "no exists args..."	else		set path to POSIX path of (item 1 of argv)	end if	set cmd to "nvim " &amp; fmt(path)	tell application "Terminal"		activate		tell window 1			do script cmd		end tell	end tellend runon fmt(pathText)	set od to AppleScript's text item delimiters	set AppleScript's text item delimiters to " "	set pathText to every text item of pathText	set AppleScript's text item delimiters to "\\ "	set pathText to pathText as string	set AppleScript's text item delimiters to od	return pathTextend fmt</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -92,15 +68,15 @@ end fmt
 				<key>Class Name</key>
 				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>3E070489-D52C-4DC4-A488-692BE4BB43F6</string>
+				<string>1E3A6915-E03F-41F9-895A-26C1EACC2CF0</string>
 				<key>Keywords</key>
 				<array>
 					<string>実行</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>6D1948E3-317B-4E6A-9584-BDAD5098BAA9</string>
+				<string>1319FA8E-795A-4CF5-A3EB-122C1B466F40</string>
 				<key>UUID</key>
-				<string>3BA8C629-987A-4D46-B5F7-C42AB95885EA</string>
+				<string>C8495D71-E464-4A85-98F2-BC17B6C01817</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -126,6 +102,8 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
